@@ -71,7 +71,10 @@ class Game extends React.Component {
       this.writeHistory({ squares : this.state.squares, score : this.state.score });
       squares = generateNewTile(squares);
       this.setState(() => {
-        return { squares : squares, isMoved : isMoved, isStarted : isStarted, score : score };
+        if(this.state.max>=score)
+          return { squares : squares, isMoved : isMoved, isStarted : isStarted, score : score };
+        else
+          return { squares : squares, isMoved : isMoved, isStarted : isStarted, score : score, max: score };
       });
 
       return;
@@ -108,7 +111,9 @@ class Game extends React.Component {
     doc.removeEventListener("touchstart", this.touchStart, false);
     doc.removeEventListener("touchend", this.touchEnd, false);
   }
-
+  componentDidUpdate(){
+    console.log("1");
+  }
   render() {
     return (
       <div className="game" id="game">

@@ -10,6 +10,7 @@ export function getNewGameState(size) {
       isStarted : false,
       score : 0,
       rewinds : 0,
-      history : []
+      history : [],
+      max:0
     };
 }
