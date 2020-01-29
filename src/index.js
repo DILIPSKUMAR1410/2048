@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Game from './Game';
+import App from './App';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 render(
-  <Game fieldSize={4} />,
+  <App/>,
   document.getElementById('root')
 );
 
