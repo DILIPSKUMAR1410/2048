@@ -57,7 +57,7 @@ class Landingpage extends React.Component {
     return (
       <div className="land">
         <div className="header">
-          Cirulli
+        <h2>Cirulli</h2>
         </div>
         <div className="rowland">
           <div className="leftrow">

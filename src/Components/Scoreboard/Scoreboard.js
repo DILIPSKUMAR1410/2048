@@ -5,9 +5,13 @@ class Scoreboard extends React.Component {
         super(props);
         this.renderTableData = this.renderTableData.bind(this);
         this.game=this.game.bind(this);
+        this.home=this.home.bind(this);
     }
     game(){
         this.props.history.push("/game");
+    }
+    home(){
+        this.props.history.push("/");
     }
     renderTableData(){
         var temp=[];
@@ -25,7 +29,11 @@ class Scoreboard extends React.Component {
     }
     render() {
         return (
+            <div>
+                <h2 onClick={this.home}>Cirulli</h2>
             <div class="list">
+                <h1>Scoreboard</h1>
+                <div className="table">
                 <table>
                     <th>S No</th>
                     <th><span>Score</span></th>
@@ -34,7 +42,9 @@ class Scoreboard extends React.Component {
                         {this.renderTableData()}
                     </tbody>
                 </table>
+                </div>
                 <button onClick={this.game}>New Game</button>
+            </div>
             </div>
         )
     }

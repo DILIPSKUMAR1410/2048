@@ -22,6 +22,8 @@ class Game extends React.Component {
     this.touchEnd = this.touchEnd.bind(this);
     this.handleTouchMove = this.handleTouchMove.bind(this);
     this.save = this.save.bind(this);
+    this.scoreBoard = this.scoreBoard.bind(this);
+    this.home = this.home.bind(this);
   }
 
   touchStart(event) {
@@ -150,8 +152,17 @@ class Game extends React.Component {
     const options = { encrypt: false };
     userSession.putFile('Cirulli.json', JSON.stringify(allscores),options)
   }
+  scoreBoard(){
+    this.props.history.push("/scoreboard");
+  }
+  home(){
+    this.props.history.push("/");
+  }
   render() {
     return (
+      <div>
+        <h2 onClick={this.home}>Cirulli</h2>
+        <div className="con">
       <div className="game" id="game">
         <div className="game-board" id="game-board">
           <div className="status">
@@ -171,7 +182,10 @@ class Game extends React.Component {
           <ul>
             <button className="veryBoringButton" onClick={this.reset}>New game</button>
             <button className="veryBoringButton" onClick={this.save}>Save</button>
+            <button className="veryBoringButton" onClick={this.scoreBoard}>ScoreBoard</button>
           </ul>
+        </div>
+        </div>
         </div>
       </div>
     );
