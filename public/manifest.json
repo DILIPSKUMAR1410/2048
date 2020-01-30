@@ -1,9 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Cirulli.xyz",
   "icons": [
   ],
-  "start_url": ".",
+  "start_url": "Cirulli.xyz",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
