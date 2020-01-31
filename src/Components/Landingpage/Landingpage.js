@@ -70,7 +70,7 @@ class Landingpage extends React.Component {
               <button onClick={this.handleSignin}>Login using blockstack</button> :
               <div>
                 <button onClick={this.handleSignOut}>Logout</button>
-                <a href="/tictactoe">Let's Play</a>
+                <a href="/game">Let's Play</a>
                 <a href="/scoreboard">Scoreboard</a>
               </div>}
           </div>
